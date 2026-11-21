@@ -1,26 +1,68 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "../styles/colors.css";
+@import "../styles/fonts.css";
+@import "../styles/typography.css";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand50: var(--brand50);
+  --color-brand100: var(--brand100);
+  --color-brand200: var(--brand200);
+  --color-brand300: var(--brand300);
+  --color-brand500: var(--brand500);
+  --color-brand600: var(--brand600);
+  --color-brand700: var(--brand700);
+  --color-brand800: var(--brand800);
+  --color-brand900: var(--brand900);
+  --color-ink50: var(--ink50);
+  --color-ink100: var(--ink100);
+  --color-ink200: var(--ink200);
+  --color-ink300: var(--ink300);
+  --color-ink400: var(--ink400);
+  --color-ink500: var(--ink500);
+  --color-ink700: var(--ink700);
+  --color-ink800: var(--ink800);
+  --color-ink900: var(--ink900);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surfaceSunken: var(--surfaceSunken);
+  --color-champagne: var(--champagne);
+  --color-sand50: var(--sand50);
+  --color-sand100: var(--sand100);
+  --color-sand200: var(--sand200);
+  --color-positive: var(--positive);
+  --color-warning: var(--warning);
+  --color-warningBg: var(--warningBg);
+  --color-warningText: var(--warningText);
+  --color-warningSoft: var(--warningSoft);
+  --color-warningOnDark: var(--warningOnDark);
+  --color-danger: var(--danger);
+  --color-dangerBg: var(--dangerBg);
+  --color-dangerText: var(--dangerText);
+  --color-kakao: var(--kakao);
+  --color-kakaoText: var(--kakaoText);
+  --color-text: var(--text);
+  --color-text2: var(--text2);
+  --color-text3: var(--text3);
+  --color-line: var(--line);
+  --color-line2: var(--line2);
+  --color-ring: var(--ring);
+  --color-textInverse: var(--textInverse);
+  --color-background: var(--canvas);
+  --color-foreground: var(--text);
+  --font-sans: "Pretendard Variable", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --font-mono: ui-monospace, monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--canvas);
+  color: var(--text);
+  font-family: "Pretendard Variable", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
+
+button, input, select, textarea { font: inherit; }
+:focus-visible { outline: 3px solid var(--ring); outline-offset: 4px; }
