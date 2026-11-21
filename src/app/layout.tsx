@@ -1,15 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { colorVariables } from "@/src/constants/designSystem/colors";
 import "./globals.css";
-
-const pretendard = localFont({
-  src: "../../public/fonts/pretendardVariable.woff2",
-  variable: "--fontPretendard",
-  weight: "45 920",
-  display: "swap",
-  fallback: ["Apple SD Gothic Neo", "Noto Sans KR", "sans-serif"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,11 +8,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="ko"
-      className={`${pretendard.variable} h-full antialiased`}
-      style={colorVariables}
-    >
+    <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

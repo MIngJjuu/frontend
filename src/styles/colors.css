@@ -1,0 +1,57 @@
+/* Figma 677:18045. 공통 색상 토큰. */
+:root {
+  /* Brand */
+  --brand50: #F2F7F4;
+  --brand100: #E6EFEA;
+  --brand200: #CFE3DD;
+  --brand300: #A7C8BC;
+  --brand500: #4E7A6B;
+  --brand600: #41695C;
+  --brand700: #356052;
+  --brand800: #24453B;
+  --brand900: #142B24;
+
+  /* Ink */
+  --ink50: #F5F7F6;
+  --ink100: #ECEFED;
+  --ink200: #DEE3E0;
+  --ink300: #C4CAC7;
+  --ink400: #8F9894;
+  --ink500: #66716D;
+  --ink700: #3A4642;
+  --ink800: #1F2A26;
+  --ink900: #111A17;
+
+  /* Surface */
+  --canvas: #FAFAF8;
+  --surface: #FFFFFF;
+  --surfaceSunken: #F4F5F2;
+  --champagne: #F3ECDD;
+
+  /* Mood */
+  --sand50: #F6F3EE;
+  --sand100: #F3EFE9;
+  --sand200: #EDE7DE;
+
+  /* Status */
+  --positive: #2F9E6B;
+  --warning: #E3A33B;
+  --warningBg: #FBF1DD;
+  --warningText: #8A5B0B;
+  --warningSoft: #FCFAF4;
+  --warningOnDark: #F6D38A;
+  --danger: #E05757;
+  --dangerBg: #FDF1F1;
+  --dangerText: #B23B3B;
+  --kakao: #FEE500;
+  --kakaoText: #191600;
+
+  /* Semantic */
+  --text: #111A17;
+  --text2: #66716D;
+  --text3: #6E7874;
+  --line: rgba(17, 26, 23, .08);
+  --line2: rgba(17, 26, 23, .14);
+  --ring: rgba(65, 105, 92, .22);
+  --textInverse: #FFFFFF;
+}

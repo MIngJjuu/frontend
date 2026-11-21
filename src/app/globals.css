@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "../styles/colors.css";
+@import "../styles/fonts.css";
 @import "../styles/typography.css";
 
 @theme inline {
@@ -47,14 +49,14 @@
   --color-textInverse: var(--textInverse);
   --color-background: var(--canvas);
   --color-foreground: var(--text);
-  --font-sans: var(--fontPretendard), "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --font-sans: "Pretendard Variable", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   --font-mono: ui-monospace, monospace;
 }
 
 body {
   background: var(--canvas);
   color: var(--text);
-  font-family: var(--fontPretendard), "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-family: "Pretendard Variable", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: -0.01em;
