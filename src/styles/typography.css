@@ -1,0 +1,26 @@
+/* Figma 677:18326. 명시된 크기/행간과 가변 굵기 650을 유지한다. */
+.tHero { font-size: 72px; line-height: 78px; font-weight: 700; letter-spacing: -0.045em; }
+.tDisplay { font-size: 48px; line-height: 55px; font-weight: 700; letter-spacing: -0.04em; }
+.tH1 { font-size: 36px; line-height: 45px; font-weight: 700; letter-spacing: -0.03em; }
+.tH2 { font-size: 28px; line-height: 36px; font-weight: 700; letter-spacing: -0.025em; }
+.tH3 { font-size: 20px; line-height: 28px; font-weight: 650; letter-spacing: -0.02em; }
+.tH4 { font-size: 17px; line-height: 25px; font-weight: 650; letter-spacing: -0.015em; }
+.tNumXl { font-size: 52px; line-height: 57px; font-weight: 700; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+.tNumL { font-size: 32px; line-height: 38px; font-weight: 700; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.tNumM { font-size: 22px; line-height: 29px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.tNumS { font-size: 16px; line-height: 22px; font-weight: 650; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+.tLead { font-size: 19px; line-height: 30px; font-weight: 400; letter-spacing: -0.015em; }
+.tBody { font-size: 16px; line-height: 26px; font-weight: 400; letter-spacing: -0.01em; }
+.tBodyS { font-size: 14px; line-height: 22px; font-weight: 400; letter-spacing: -0.005em; }
+.tLabel { font-size: 15px; line-height: 20px; font-weight: 600; letter-spacing: -0.01em; }
+.tCaption { font-size: 13px; line-height: 19px; font-weight: 500; letter-spacing: 0em; }
+.tMicro { font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0em; }
+.tEyebrow { font-size: 13px; line-height: 18px; font-weight: 650; letter-spacing: 0.02em; color: var(--brand600); }
+.mainHeroTitle { font-size: clamp(40px, 4.4vw, 72px); line-height: 1.1746031746031746; font-weight: 700; letter-spacing: -0.04em; }
+.returnHeroTitle { font-size: clamp(32px, 3.2vw, 56px); line-height: 1.2826086956521738; font-weight: 600; letter-spacing: -0.035em; }
+.vendorRefAmount { font-size: 21px; line-height: 29px; font-weight: 700; letter-spacing: -0.025em; font-variant-numeric: tabular-nums; }
+.stepItem { font-size: 13.5px; line-height: 20px; font-weight: 400; letter-spacing: 0em; }
+.stepNumber { font-size: 11px; line-height: 16px; font-weight: 700; letter-spacing: 0em; }
+
+.stepItem[aria-current="step"] { font-weight: 650; }
+.tabularNumbers { font-variant-numeric: tabular-nums; }

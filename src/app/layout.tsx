@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { colorVariables } from "@/src/constants/designSystem/colors";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const pretendard = localFont({
+  src: "../../public/fonts/pretendardVariable.woff2",
+  variable: "--fontPretendard",
+  weight: "45 920",
+  display: "swap",
+  fallback: ["Apple SD Gothic Neo", "Noto Sans KR", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -20,8 +19,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="ko"
+      className={`${pretendard.variable} h-full antialiased`}
+      style={colorVariables}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
