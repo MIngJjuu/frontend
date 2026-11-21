@@ -1,9 +1,64 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# WeDid — AGENTS.md
 
-## This is NOT the Next.js you know
+## 프로젝트 개요
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+- WeDid은 결혼 예상 비용 계산, 준비 로드맵 관리, 업체 탐색 및 비교를 제공하는 웹 서비스다.
+- 프론트엔드 개발자 3명이 기능별로 병렬 개발한다.
+- 기존 기술 스택, 폴더 구조, 코딩 컨벤션을 우선 따른다.
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+## 담당 영역
 
-<!-- END:nextjs-agent-rules -->
+- A: 비로그인 메인, 결혼 조건 입력, 예상 비용 계산, 로그인 UI, 비로그인 로드맵
+- B: 로그인 후 로드맵, 단계 관리, 짝꿍 초대, 내 정보
+- C: 업체 탐색·비교, 로그인 후 메인·홈, 공통 레이아웃
+
+## 디자인 기준
+
+- Figma를 UI 구현의 기준으로 사용한다.
+- 기본 화면뿐 아니라 로딩, 오류, 빈 상태, 팝업, 완료 상태도 반영한다.
+- Figma에 없는 기능이나 동작을 임의로 추가하지 않는다.
+
+### Figma
+
+- 첫 방문 / 비용 계산:
+  https://www.figma.com/design/4uJLQ7PqAXgVzzWLmDRV8g/?node-id=677-954
+- 로드맵 / 단계 진행:
+  https://www.figma.com/design/4uJLQ7PqAXgVzzWLmDRV8g/?node-id=677-4920
+- 업체 찾기 / 비교:
+  https://www.figma.com/design/4uJLQ7PqAXgVzzWLmDRV8g/?node-id=677-9942
+- 재방문 / 홈:
+  https://www.figma.com/design/4uJLQ7PqAXgVzzWLmDRV8g/?node-id=677-13573
+- 짝꿍 초대 / 내 정보:
+  https://www.figma.com/design/4uJLQ7PqAXgVzzWLmDRV8g/?node-id=677-15976
+- 로그인 팝업:
+  https://www.figma.com/design/4uJLQ7PqAXgVzzWLmDRV8g/?node-id=677-16935
+
+## 개발 원칙
+
+1. 작업 시작 전 관련 코드와 기존 컴포넌트를 확인한다.
+2. 기존 컴포넌트, 훅, 유틸리티를 우선 재사용한다.
+3. UI, 상태 관리, 비즈니스 로직, API 호출의 책임을 분리한다.
+4. 중복 코드와 불필요한 추상화를 피한다.
+5. 요청받은 기능과 관련된 파일만 수정한다.
+6. 다른 담당자의 기능이나 공통 구조를 임의로 변경하지 않는다.
+7. 새 라이브러리는 명확한 필요성이 있을 때만 추가한다.
+8. API가 준비되지 않았다면 Mock 데이터를 명확히 구분하고 실제 API 규격을 추측하지 않는다.
+9. 임시 구현이나 하드코딩을 완료된 기능처럼 취급하지 않는다.
+10. 새로 작성하는 이름은 camelCase를 사용한다. 프레임워크나 외부 라이브러리가 요구하는 이름은 해당 규칙을 따른다.
+
+## 협업 원칙
+
+- 기능별로 독립적인 작업이 가능하도록 구현한다.
+- 다른 기능과 연결되는 데이터 타입과 인터페이스는 일관되게 유지한다.
+- 공통 컴포넌트나 타입 변경 시 기존 사용처에 미치는 영향을 확인한다.
+- 요청하지 않은 대규모 리팩터링이나 코드 정리는 수행하지 않는다.
+- 커밋 메시지, 이슈, PR은 필수적인 영어 기술 용어를 제외하고 한국어로 작성한다.
+- 커밋 요청이 있으면 작업 단위로 나누고, 함께 처리해도 되는 관련 변경은 하나의 커밋으로 묶는다.
+- PR은 사용자가 직접 작성한다. 별도 요청 없이 생성하지 않는다.
+
+## 검증 및 결과 보고
+
+- 프로젝트에 정의된 린트, 타입 검사, 테스트를 가능한 범위에서 실행한다.
+- 기존 기능에 영향을 주지 않았는지 확인한다.
+- 작업 완료 후 변경 사항, 검증 결과, 남은 문제를 간결하게 정리한다.
+- 명시적인 요청 없이 커밋하거나 푸시하지 않는다.
